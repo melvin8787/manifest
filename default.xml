@@ -41,6 +41,9 @@
   <remote  name="cfx"
            fetch="https://bitbucket.org/" />
 
+  <remote  name="seandroid"
+           fetch="https://bitbucket.org/" />
+
   <!-- use revision refs/heads/kitkat -->
   <remote  name="monkeh"
            fetch="https://github.com/" />
