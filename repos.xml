@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim: set et sw=2 ts=2: -->
+
+<lookup>
+  <repo  name="aosp"    platform/manifest
+         url="https://android.googlesource.com"
+         revision="android-4.2.2_r1"
+         review="https://android-review.googlesource.com/" />
+
+  <repo  name="cm"    android
+         url="https://github.com/CyanogenMod"
+         revision="cm-10.1"
+         review="review.cyanogenmod.com" />
+
+  <repo  name="aokp"    platform_manifest
+         url="https://github.com/AOKP"
+         revision="jb-mr1"
+         review="gerrit.aokp.co" />
+
+  <repo  name="paranoid"    manifest
+         url="https://github.com/ParanoidAndroid"
+         revision="jellybean"
+         review="gerrit.paranoidandroid.co" />
+
+  <repo  name="evervolv"    android
+         url="https://github.com/Evervolv"
+         revision="jellybean"
+         review="review.evervolv.com" />
+
+  <repo  name="pac"    android
+         url="https://github.com/PAC-man"
+         revision="cm-10.1"
+         review="review.pac-rom.com" />
+
+  <repo  name="cfx-bitbucket"    android
+         url="https://bitbucket.org/codefirex"
+         revision="jb-devel" />
+
+  <repo  name="cfx-github"    android
+         url="https://github.com/codefireX"
+         revision="jb-devel" />
+
+  <repo  name="codeaurora"
+         url="git://codeaurora.org/" />
+
+  <repo  name="seandroid" manifests
+         url="https://bitbucket.org/seandroid"
+         revision="master" />
+
+  <repo  name="muppets"
+         url="https://github.com/TheMuppets"
+         revision="cm-10.1" />
+
+  <repo  name="linaro"
+         url="git://android.git.linaro.org/" />
+
+  <repo  name="opensemc"    android
+         url="https://github.com/OpenSEMC"
+         revision="cm10.1" />
+
+  <repo  name="somex"    android
+         url="https://github.com/SomethingExplosive"
+         revision="somex-4.2" />
+
+  <repo  name="pureaosp"    android
+         url="https://github.com/Pure-Aosp"
+         revision="jb-mr1.1-release" />
+
+  <repo  name="mokee"    android
+         url="https://github.com/MoKee"
+         revision="jb-mr1_mkt"
+         review="review.mfunz.com" />
+
+  <repo  name="rascarlo"    android_manifest
+         url="https://github.com/rascarlo"
+         revision="jb-ras-mr1.1" />
+
+  <repo  name="carbon"    android
+         url="https://github.com/CarbonDev"
+         revision="jb2"
+         review="review.carbon-rom.com" />
+
+  <repo  name="chameleon"    android
+         url="https://github.com/ChameleonOS"
+         revision="jellybean-mr1"
+         review="review.chameleonos.org" />
+
+  <repo  name="acsop"    android
+         url="https://github.com/ACSOP"
+         revision="master" />
+
+  <repo  name="andromadus"    android
+         url="https://github.com/Andromadus"
+         revision="cm10.1" />
+
+  <repo  name="saber"    android
+         url="https://github.com/SaberMod"
+         revision="sm-jb-mr1" />
+
+  <repo  name="dirt"    android
+         url="https://github.com/TeamDirt"
+         revision="jellybean"
+         review="review.androidfiles.org" />
+
+  <repo  name="liquidsmooth"    android
+         url="https://github.com/LiquidSmooth"
+         revision="jb2" />
+
+  <repo  name="cna"    android_manifest
+         url="https://github.com/CNA"
+         revision="jellybean" />
+
+  <repo  name="horizon"    platform_manifest
+         url="https://github.com/TeamHorizon"
+         revision="jb-mr1"
+         review="review.gerrithub.io" />
+
+  <repo  name="droidconcepts"    DC-4.3_Manifest
+         url="https://github.com/Droid-Concepts"
+         revision="dc43-b" />
+
+  <repo  name="rootbox"
+         url="https://github.com/Root-Box"
+         revision="jb-mr1" />
+
+  <repo  name="sourcery"    platform_manifest
+         url="https://github.com/TeamSourcery"
+         revision="jb4.2.2" />
+
+  <repo  name="hdrom"    platform_manifest
+         url="https://github.com/HDrom"
+         revision="jb"
+         review="gerrit.pernici.net" />
+
+  <repo  name="hyperdroid"    platform_manifest
+         url="https://github.com/HyperDroid"
+         revision="jb4.2" />
+
+  <repo  name="unicornbutter"    platform_manifest
+         url="https://github.com/UnicornButter"
+         revision="jb-mr1" />
+
+  <repo  name="kingkang"    platform_manifest
+         url="https://github.com/KingKang"
+         revision="jb" />
+
+  <repo  name="icecoldjelly"    platform_manifest
+         url="https://github.com/IceColdJelly"
+         revision="jb" />
+
+  <repo  name="slimroms"    platform_manifest
+         url="https://github.com/SlimRoms"
+         revision="jb4.2"
+         review="https://review.slimroms.net:8443" />
+
+  <repo  name="aocp"    platform_manifest
+         url="https://github.com/TheCollective"
+         revision="jellybean2" />
+
+  <repo  name="baked"    platform_manifest
+         url="https://github.com/TeamBAKED"
+         revision="jb-4.2" />
+
+  <repo  name="xyaosp"    platform_manifest
+         url="https://github.com/XYAOSP"
+         revision="jb4.2" />
+
+  <repo  name="vanir"    platform_manifest
+         url="https://github.com/VanirAOSP"
+         revision="jb42"
+         review="vaniraosp.goo.im" />
+
+  <repo  name="omapzoom"
+         url="git.omapzoom.org"
+         review="review.omapzoom.org" />
+</lookup>
+

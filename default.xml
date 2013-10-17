@@ -49,7 +49,7 @@
            sync-j="4" />
 
   <notice>
-  MonkehMod 4.2.2_r1 JellyBean mr1 has been successfully synced.
+  MonkehMod 4.2.2 JellyBean mr1 has been successfully synced.
   </notice>
 
   <project path="build" name="platform/build" groups="pdk" >
