@@ -58,7 +58,7 @@ def clean_tree(lm):
 		if child.attrib['path'].startswith('/'):
 			child.attrib['path'] = re.sub('^/', '', child.attrib['path'])
 
-def update_github(user, outfile, manifest_url):
+def update_github_xml(user, outfile, manifest_url):
 	print("Updating %s" % outfile)
 
 	try:
@@ -109,6 +109,28 @@ def update_github(user, outfile, manifest_url):
 	f.write(raw_xml)
 	f.close()
 
+def update_remote(repofile, repoelem):
+	remote_name = repo.attrib['name']
+	remote_url = repo.attrib['url']
+
+	has_manifest, manifest = get_safe_attrib(repo, 'manifest')
+	has_revision, revision = get_safe_attrib(repo, 'revision')
+
+	if 'github.com' in remote_url:
+		user = remote_url.replace("https://github.com", "")
+		outfile = "%s.xml" % remote_name
+
+		if has_manifest and has_revision:
+			manifest_raw = "https://raw.github.com/%s/%s/%s/default.xml" % (user, manifest, revision)
+		else:
+			manifest_raw = None
+
+		update_github_xml(user, outfile, manifest_raw)
+
+def update_single_remote(repofile, remote_name):
+	repo = ElementTree.parse(repofile).getroot().find(".//repo[@name='%s']" % remote)
+	update_remote(repofile, repo)
+
 def update_remote_manifests(repofile):
 	print("Updating manifest files using %s" % repofile)
 
@@ -117,23 +139,8 @@ def update_remote_manifests(repofile):
 	for child in remotetree.iter():
 		if child.tag != 'repo':
 			continue
+		update_remote(repofile, child)
 
-		remote_name = child.attrib['name']
-		remote_url = child.attrib['url']
-
-		has_manifest, manifest = get_safe_attrib(child, 'manifest')
-		has_revision, revision = get_safe_attrib(child, 'revision')
-
-		if 'github.com' in remote_url:
-			user = remote_url.replace("https://github.com/", "")
-			outfile = "%s.xml" % remote_name
-
-			if has_manifest and has_revision:
-				manifest_raw = "https://raw.github.com/%s/%s/%s/default.xml" % (user, manifest, revision)
-			else:
-				manifest_raw = None
-
-			update_github(user, outfile, manifest_raw);
 
 update_remote_manifests("../repos.xml")
 
