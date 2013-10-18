@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><manifest>
-  <remote fetch="https://github.com" name="github" review="http://gerrit.androidninjas.com:8181/" revision="jellybean" />
-  <remote fetch="ssh://git@bitbucket.org/paranoidandroid/" name="paranoid" revision="jellybean" />
-  <default remote="aosp" revision="refs/tags/android-4.2.2_r1.2" sync-c="true" sync-j="4" />
-  <project name="ParanoidAndroid/android_build" path="build">
+  <remote fetch="git://github.com/" name="github" />
+  <project name="SomethingExplosive/android_build" path="build" remote="github" revision="somex-4.2">
     </project>
+  <project name="SomethingExplosive/android" path="android" />
   <project name="platform/abi/cpp" path="abi/cpp" />
-  <project name="ParanoidAndroid/android_bionic" path="bionic" />
+  <project name="platform/bionic" path="bionic" />
   <project name="platform/bootable/bootloader/legacy" path="bootable/bootloader/legacy" />
   <project name="platform/bootable/diskinstaller" path="bootable/diskinstaller" />
   <project name="platform/bootable/recovery" path="bootable/recovery" />
   <project name="platform/cts" path="cts" />
-  <project name="ParanoidAndroid/android_dalvik" path="dalvik" />
+  <project name="platform/dalvik" path="dalvik" />
   <project name="platform/development" path="development" />
+  <project name="SomethingExplosive/android_device_asus_grouper" path="device/asus/grouper" />
+  <project name="SomethingExplosive/android_device_asus_tilapia" path="device/asus/tilapia" />
   <project name="device/common" path="device/common" />
+  <project name="device/generic/armv7-a-neon" path="device/generic/armv7-a-neon" />
+  <project name="device/generic/armv7-a" path="device/generic/armv7-a" />
+  <project name="device/generic/common" path="device/generic/common" />
+  <project name="device/generic/goldfish" path="device/generic/goldfish" />
+  <project name="device/generic/mips" path="device/generic/mips" />
+  <project name="device/generic/x86" path="device/generic/x86" />
   <project name="device/google/accessory/arduino" path="device/google/accessory/arduino" />
   <project name="device/google/accessory/demokit" path="device/google/accessory/demokit" />
+  <project name="SomethingExplosive/android_device_lge_mako" path="device/lge/mako" />
+  <project name="SomethingExplosive/android_device_lge_mako-kernel" path="device/lge/mako-kernel" />
   <project name="device/sample" path="device/sample" />
+  <project name="SomethingExplosive/android_device_samsung_maguro" path="device/samsung/maguro" />
+  <project name="SomethingExplosive/android_device_samsung_manta" path="device/samsung/manta" />
+  <project name="SomethingExplosive/android_device_samsung_toro" path="device/samsung/toro" />
+  <project name="SomethingExplosive/android_device_samsung_toroplus" path="device/samsung/toroplus" />
+  <project name="SomethingExplosive/android_device_samsung_tuna" path="device/samsung/tuna" />
+  <project name="device/ti/panda" path="device/ti/panda" />
   <project name="platform/docs/source.android.com" path="docs/source.android.com" />
   <project name="platform/external/aac" path="external/aac" />
   <project name="platform/external/android-clat" path="external/android-clat" />
@@ -30,13 +45,13 @@
   <project name="platform/external/astl" path="external/astl" />
   <project name="platform/external/bison" path="external/bison" />
   <project name="platform/external/blktrace" path="external/blktrace" />
-  <project name="ParanoidAndroid/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" />
+  <project name="platform/external/bluetooth/bluedroid" path="external/bluetooth/bluedroid" />
   <project name="platform/external/bouncycastle" path="external/bouncycastle" />
-  <project name="ParanoidAndroid/android_external_busybox" path="external/busybox" />
   <project name="platform/external/bsdiff" path="external/bsdiff" />
+  <project name="SomethingExplosive/android_external_busybox" path="external/busybox" />
   <project name="platform/external/bzip2" path="external/bzip2" />
   <project name="platform/external/checkpolicy" path="external/checkpolicy" />
-  <project name="ParanoidAndroid/android_external_chromium" path="external/chromium" />
+  <project name="platform/external/chromium" path="external/chromium" />
   <project name="platform/external/chromium-trace" path="external/chromium-trace" />
   <project name="platform/external/cibu-fonts" path="external/cibu-fonts" />
   <project name="platform/external/clang" path="external/clang" />
@@ -45,14 +60,14 @@
   <project name="platform/external/dexmaker" path="external/dexmaker" />
   <project name="platform/external/dhcpcd" path="external/dhcpcd" />
   <project name="platform/external/dnsmasq" path="external/dnsmasq" />
-  <project name="ParanoidAndroid/android_external_doclava" path="external/doclava" />
+  <project name="platform/external/doclava" path="external/doclava" />
   <project name="platform/external/dropbear" path="external/dropbear" />
-  <project name="ParanoidAndroid/android_external_e2fsprogs" path="external/e2fsprogs" />
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" />
   <project name="platform/external/easymock" path="external/easymock" />
   <project name="platform/external/eclipse-basebuilder" path="external/eclipse-basebuilder" />
   <project name="platform/external/eclipse-windowbuilder" path="external/eclipse-windowbuilder" />
-  <project name="platform/external/elfutils" path="external/elfutils" />
   <project name="platform/external/eigen" path="external/eigen" />
+  <project name="platform/external/elfutils" path="external/elfutils" />
   <project name="platform/external/embunit" path="external/embunit" />
   <project name="platform/external/emma" path="external/emma" />
   <project name="platform/external/esd" path="external/esd" />
@@ -85,11 +100,13 @@
   <project name="platform/external/jhead" path="external/jhead" />
   <project name="platform/external/jmdns" path="external/jmdns" />
   <project name="platform/external/jmonkeyengine" path="external/jmonkeyengine" />
-  <project name="ParanoidAndroid/android_external_jpeg" path="external/jpeg" />
+  <project name="platform/external/jpeg" path="external/jpeg" />
   <project name="platform/external/jsilver" path="external/jsilver" />
   <project name="platform/external/jsr305" path="external/jsr305" />
   <project name="platform/external/junit" path="external/junit" />
   <project name="platform/external/kernel-headers" path="external/kernel-headers" />
+  <project name="CyanogenMod/Superuser" path="external/koush/Superuser" />
+  <project name="CyanogenMod/Widgets" path="external/koush/Widgets" />
   <project name="platform/external/libcap-ng" path="external/libcap-ng" />
   <project name="platform/external/libffi" path="external/libffi" />
   <project name="platform/external/libgsm" path="external/libgsm" />
@@ -147,11 +164,10 @@
   <project name="platform/external/replicaisland" path="external/replicaisland" />
   <project name="platform/external/safe-iop" path="external/safe-iop" />
   <project name="platform/external/sepolicy" path="external/sepolicy" />
-  <project name="ParanoidAndroid/android_external_skia" path="external/skia" />
+  <project name="platform/external/skia" path="external/skia" />
   <project name="platform/external/smali" path="external/smali" />
   <project name="platform/external/sonivox" path="external/sonivox" />
   <project name="platform/external/speex" path="external/speex" />
-  <project name="koush/Superuser" path="external/koush/Superuser" />
   <project name="platform/external/sqlite" path="external/sqlite" />
   <project name="platform/external/srec" path="external/srec" />
   <project name="platform/external/srtp" path="external/srtp" />
@@ -167,10 +183,9 @@
   <project name="platform/external/tremolo" path="external/tremolo" />
   <project name="platform/external/v8" path="external/v8" />
   <project name="platform/external/valgrind" path="external/valgrind" />
-  <project name="ParanoidAndroid/android_external_webkit" path="external/webkit" />
+  <project name="platform/external/webkit" path="external/webkit" />
   <project name="platform/external/webp" path="external/webp" />
   <project name="platform/external/webrtc" path="external/webrtc" />
-  <project name="koush/Widgets" path="external/koush/Widgets" />
   <project name="platform/external/wpa_supplicant_6" path="external/wpa_supplicant_6" />
   <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" />
   <project name="platform/external/xmlwriter" path="external/xmlwriter" />
@@ -178,8 +193,8 @@
   <project name="platform/external/yaffs2" path="external/yaffs2" />
   <project name="platform/external/zlib" path="external/zlib" />
   <project name="platform/external/zxing" path="external/zxing" />
-  <project name="platform/frameworks/av" path="frameworks/av" />
-  <project name="ParanoidAndroid/android_frameworks_base" path="frameworks/base" />
+  <project name="SomethingExplosive/android_frameworks_av" path="frameworks/av" />
+  <project name="SomethingExplosive/android_frameworks_base" path="frameworks/base" />
   <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" />
   <project name="platform/frameworks/compile/linkloader" path="frameworks/compile/linkloader" />
   <project name="platform/frameworks/compile/llvm-ndk-cc" path="frameworks/compile/llvm-ndk-cc" />
@@ -188,7 +203,7 @@
   <project name="platform/frameworks/ex" path="frameworks/ex" />
   <project name="platform/frameworks/mff" path="frameworks/mff" />
   <project name="platform/frameworks/ml" path="frameworks/ml" />
-  <project name="ParanoidAndroid/android_frameworks_native" path="frameworks/native" />
+  <project name="SomethingExplosive/android_frameworks_native" path="frameworks/native" />
   <project name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" />
   <project name="platform/frameworks/opt/carddav" path="frameworks/opt/carddav" />
   <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" />
@@ -196,9 +211,9 @@
   <project name="platform/frameworks/opt/mailcommon" path="frameworks/opt/mailcommon" />
   <project name="platform/frameworks/opt/mms" path="frameworks/opt/mms" />
   <project name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" />
-  <project name="ParanoidAndroid/android_frameworks_opt_telephony" path="frameworks/opt/telephony" />
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" />
   <project name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" />
-  <project name="ParanoidAndroid/android_frameworks_rs" path="frameworks/rs" />
+  <project name="platform/frameworks/rs" path="frameworks/rs" />
   <project name="platform/frameworks/support" path="frameworks/support" />
   <project name="platform/frameworks/testing" path="frameworks/testing" />
   <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm" />
@@ -207,43 +222,55 @@
   <project name="platform/hardware/invensense" path="hardware/invensense" />
   <project name="platform/hardware/libhardware" path="hardware/libhardware" />
   <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" />
+  <project name="platform/hardware/msm7k" path="hardware/msm7k" />
+  <project name="platform/hardware/qcom/audio" path="hardware/qcom/audio" />
+  <project name="platform/hardware/qcom/bt" path="hardware/qcom/bt" />
+  <project name="platform/hardware/qcom/camera" path="hardware/qcom/camera" />
+  <project name="platform/hardware/qcom/display" path="hardware/qcom/display" />
+  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" />
+  <project name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster" />
+  <project name="platform/hardware/qcom/media" path="hardware/qcom/media" />
+  <project name="platform/hardware/qcom/msm8960" path="hardware/qcom/msm8960" />
+  <project name="platform/hardware/qcom/power" path="hardware/qcom/power" />
+  <project name="platform/hardware/qcom/sensors" path="hardware/qcom/sensors" />
+  <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" />
   <project name="platform/hardware/ril" path="hardware/ril" />
   <project name="platform/hardware/samsung_slsi/exynos5" path="hardware/samsung_slsi/exynos5" />
   <project name="platform/hardware/ti/omap3" path="hardware/ti/omap3" />
   <project name="platform/hardware/ti/omap4xxx" path="hardware/ti/omap4xxx" />
   <project name="platform/hardware/ti/wlan" path="hardware/ti/wlan" />
   <project name="platform/hardware/ti/wpan" path="hardware/ti/wpan" />
-  <project name="ParanoidAndroid/android_libcore" path="libcore" />
+  <project name="SomethingExplosive/android_libcore" path="libcore" />
   <project name="platform/libnativehelper" path="libnativehelper" />
   <project name="platform/ndk" path="ndk" />
   <project name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" />
   <project name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" />
-  <project name="ParanoidAndroid/android_packages_apps_Browser" path="packages/apps/Browser" />
-  <project name="android_packages_apps_Calculator" path="packages/apps/Calculator" />
-  <project name="ParanoidAndroid/android_packages_apps_Calendar" path="packages/apps/Calendar" />
+  <project name="platform/packages/apps/Browser" path="packages/apps/Browser" />
+  <project name="SomethingExplosive/android_packages_apps_Calculator" path="packages/apps/Calculator" />
+  <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar" />
   <project name="platform/packages/apps/Camera" path="packages/apps/Camera" />
   <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" />
   <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" />
-  <project name="ParanoidAndroid/android_packages_apps_Contacts" path="packages/apps/Contacts" />
-  <project name="ParanoidAndroid/android_packages_apps_DeskClock" path="packages/apps/DeskClock" />
-  <project name="platform/packages/apps/Email" path="packages/apps/Email2" />
+  <project name="SomethingExplosive/android_packages_apps_Contacts" path="packages/apps/Contacts" />
+  <project name="SomethingExplosive/android_packages_apps_DeskClock" path="packages/apps/DeskClock" />
+  <project name="platform/packages/apps/Email" path="packages/apps/Email" />
   <project name="platform/packages/apps/Exchange" path="packages/apps/Exchange" />
   <project name="platform/packages/apps/Gallery" path="packages/apps/Gallery" />
   <project name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" />
   <project name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" />
   <project name="platform/packages/apps/KeyChain" path="packages/apps/KeyChain" />
-  <project name="ParanoidAndroid/android_packages_apps_Launcher2" path="packages/apps/Launcher2" />
+  <project name="SomethingExplosive/android_packages_apps_Launcher2" path="packages/apps/Launcher2" />
   <project name="platform/packages/apps/LegacyCamera" path="packages/apps/LegacyCamera" />
-  <project name="ParanoidAndroid/android_packages_apps_Mms" path="packages/apps/Mms" />
+  <project name="SomethingExplosive/android_packages_apps_Mms" path="packages/apps/Mms" />
+  <project name="platform/packages/apps/Music" path="packages/apps/Music" />
   <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" />
-  <project name="ParanoidAndroid/android_packages_apps_Nfc" path="packages/apps/Nfc" />
+  <project name="platform/packages/apps/Nfc" path="packages/apps/Nfc" />
   <project name="platform/packages/apps/PackageInstaller" path="packages/apps/PackageInstaller" />
-  <project name="ParanoidAndroid/android_packages_apps_Phone" path="packages/apps/Phone" />
-  <project name="ParanoidAndroid/android_packages_apps_ParanoidOTA" path="packages/apps/ParanoidOTA" />
+  <project name="SomethingExplosive/android_packages_apps_Phone" path="packages/apps/Phone" />
   <project name="platform/packages/apps/Protips" path="packages/apps/Protips" />
   <project name="platform/packages/apps/Provision" path="packages/apps/Provision" />
   <project name="platform/packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox" />
-  <project name="ParanoidAndroid/android_packages_apps_Settings" path="packages/apps/Settings" />
+  <project name="SomethingExplosive/android_packages_apps_Settings" path="packages/apps/Settings" />
   <project name="platform/packages/apps/SmartCardService" path="packages/apps/SmartCardService" />
   <project name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" />
   <project name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts" />
@@ -253,16 +280,17 @@
   <project name="platform/packages/apps/VideoEditor" path="packages/apps/VideoEditor" />
   <project name="platform/packages/apps/VoiceDialer" path="packages/apps/VoiceDialer" />
   <project name="platform/packages/experimental" path="packages/experimental" />
-  <project name="ParanoidAndroid/android_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" />
+  <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" />
   <project name="platform/packages/inputmethods/OpenWnn" path="packages/inputmethods/OpenWnn" />
+  <project name="platform/packages/inputmethods/PinyinIME" path="packages/inputmethods/PinyinIME" />
   <project name="platform/packages/providers/ApplicationsProvider" path="packages/providers/ApplicationsProvider" />
   <project name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" />
   <project name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" />
-  <project name="ParanoidAndroid/android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" />
+  <project name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" />
   <project name="platform/packages/providers/DrmProvider" path="packages/providers/DrmProvider" />
   <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" />
   <project name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" />
-  <project name="ParanoidAndroid/android_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" />
+  <project name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" />
   <project name="platform/packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" />
   <project name="platform/packages/screensavers/Basic" path="packages/screensavers/Basic" />
   <project name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" />
@@ -281,14 +309,14 @@
   <project name="platform/prebuilts/clang/linux-x86/3.1" path="prebuilts/clang/linux-x86/3.1" />
   <project name="platform/prebuilts/clang/linux-x86/3.2" path="prebuilts/clang/linux-x86/3.2" />
   <project name="platform/prebuilts/eclipse" path="prebuilts/eclipse" />
+  <project name="platform/prebuilts/eclipse-build-deps" path="prebuilts/eclipse-build-deps" />
+  <project name="platform/prebuilts/eclipse-build-deps-sources" path="prebuilts/eclipse-build-deps-sources" />
   <project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.6" />
   <project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.6" />
   <project name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.6" />
   <project name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" />
   <project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" />
   <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" />
-  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" />
-  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" />
   <project name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" />
   <project name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" />
   <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" />
@@ -301,66 +329,47 @@
   <project name="platform/prebuilts/tools" path="prebuilts/tools" />
   <project name="platform/sdk" path="sdk" />
   <project name="platform/system/bluetooth" path="system/bluetooth" />
-  <project name="ParanoidAndroid/android_system_core" path="system/core" />
-  <project name="ParanoidAndroid/android_system_extras" path="system/extras" />
+  <project name="platform/system/core" path="system/core" />
+  <project name="SomethingExplosive/android_system_extras" path="system/extras" />
   <project name="platform/system/media" path="system/media" />
   <project name="platform/system/netd" path="system/netd" />
   <project name="platform/system/security" path="system/security" />
   <project name="platform/system/vold" path="system/vold" />
   <project name="platform/tools/build" path="tools/build" />
   <project name="platform/tools/motodev" path="tools/motodev" />
-  <project name="ParanoidAndroid/android_vendor_pa" path="vendor/pa" />
-  <project name="ParanoidAndroid/paranoid" path="paranoid">
-    </project>
-  <project name="ParanoidAndroid/android_vendor_tmobile" path="vendor/tmobile" />
-  <project name="ParanoidAndroid/android_bootable_recovery" path="/bootable/recovery" />
-  <project name="ParanoidAndroid/android_device_asus_deb" path="/device/asus/deb" />
-  <project name="ParanoidAndroid/android_device_asus_flo" path="/device/asus/flo" />
-  <project name="ParanoidAndroid/android_device_asus_grouper" path="/device/asus/grouper" />
-  <project name="ParanoidAndroid/android_device_asus_tilapia" path="/device/asus/tilapia" />
-  <project name="ParanoidAndroid/android_device_lge_mako" path="/device/lge/mako" />
-  <project name="ParanoidAndroid/android_device_oppo_find5" path="/device/oppo/find5" />
-  <project name="ParanoidAndroid/android_device_samsung_galaxys2-common" path="/device/samsung/galaxys2-common" />
-  <project name="ParanoidAndroid/android_device_samsung_i9300" path="/device/samsung/i9300" />
-  <project name="ParanoidAndroid/android_device_samsung_i9305" path="/device/samsung/i9305" />
-  <project name="ParanoidAndroid/android_device_samsung_maguro" path="/device/samsung/maguro" />
-  <project name="ParanoidAndroid/android_device_samsung_manta" path="/device/samsung/manta" />
-  <project name="ParanoidAndroid/android_device_samsung_n7000" path="/device/samsung/n7000" />
-  <project name="ParanoidAndroid/android_device_samsung_smdk4412-common" path="/device/samsung/smdk4412-common" />
-  <project name="ParanoidAndroid/android_device_samsung_toro" path="/device/samsung/toro" />
-  <project name="ParanoidAndroid/android_device_samsung_toroplus" path="/device/samsung/toroplus" />
-  <project name="ParanoidAndroid/android_device_samsung_tuna" path="/device/samsung/tuna" />
-  <project name="ParanoidAndroid/android_device_sony_qcom-common" path="/device/sony/qcom-common" />
-  <project name="ParanoidAndroid/android_external_webp" path="/external/webp" />
-  <project name="ParanoidAndroid/android_hardware_libhardware" path="/hardware/libhardware" />
-  <project name="ParanoidAndroid/android_hardware_qcom_display" path="/hardware/qcom/display" />
-  <project name="ParanoidAndroid/android_kernel_grouper" path="/kernel/grouper" />
-  <project name="ParanoidAndroid/android_kernel_samsung_tuna" path="/kernel/samsung/tuna" />
-  <project name="ParanoidAndroid/android_packages_apps_ParanoidWallpapers" path="/packages/apps/ParanoidWallpapers" />
-  <project name="ParanoidAndroid/android_packages_providers_ContactsProvider" path="/packages/providers/ContactsProvider" />
-  <project name="ParanoidAndroid/android_system_security" path="/system/security" />
-  <project name="ParanoidAndroid/android_system_vold" path="/system/vold" />
-  <project name="ParanoidAndroid/android_vendor_tmobile_libs_com.tmobile.themes" path="/vendor/tmobile/libs/com.tmobile.themes" />
-  <project name="ParanoidAndroid/android_vendor_tmobile_providers_ThemeManager" path="/vendor/tmobile/providers/ThemeManager" />
-  <project name="ParanoidAndroid/cyanogenmod_kernel_samsung_tuna" path="cyanogenmod/kernel/samsung/tuna" />
-  <project name="ParanoidAndroid/HALO" path="HALO" />
-  <project name="ParanoidAndroid/lge-kernel-mako" path="lge-kernel-mako" />
-  <project name="ParanoidAndroid/manifest" path="manifest" />
-  <project name="ParanoidAndroid/PAGerritPull" path="PAGerritPull" />
-  <project name="ParanoidAndroid/proprietary_vendor_asus" path="proprietary/vendor/asus" />
-  <project name="ParanoidAndroid/proprietary_vendor_audience" path="proprietary/vendor/audience" />
-  <project name="ParanoidAndroid/proprietary_vendor_broadcom" path="proprietary/vendor/broadcom" />
-  <project name="ParanoidAndroid/proprietary_vendor_csr" path="proprietary/vendor/csr" />
-  <project name="ParanoidAndroid/proprietary_vendor_elan" path="proprietary/vendor/elan" />
-  <project name="ParanoidAndroid/proprietary_vendor_imgtec" path="proprietary/vendor/imgtec" />
-  <project name="ParanoidAndroid/proprietary_vendor_invensense" path="proprietary/vendor/invensense" />
-  <project name="ParanoidAndroid/proprietary_vendor_lge" path="proprietary/vendor/lge" />
-  <project name="ParanoidAndroid/proprietary_vendor_nvidia" path="proprietary/vendor/nvidia" />
-  <project name="ParanoidAndroid/proprietary_vendor_nxp" path="proprietary/vendor/nxp" />
-  <project name="ParanoidAndroid/proprietary_vendor_qcom" path="proprietary/vendor/qcom" />
-  <project name="ParanoidAndroid/proprietary_vendor_samsung" path="proprietary/vendor/samsung" />
-  <project name="ParanoidAndroid/proprietary_vendor_ti" path="proprietary/vendor/ti" />
-  <project name="ParanoidAndroid/proprietary_vendor_trusted_logic" path="proprietary/vendor/trusted/logic" />
-  <project name="ParanoidAndroid/proprietary_vendor_widevine" path="proprietary/vendor/widevine" />
-  <project name="ParanoidAndroid/themes-platform-vendor-tmobile-apps-ThemeChooser" path="themes--vendor-tmobile-apps-ThemeChooser" />
+  <project name="solarnz/GooManager_prebuilt" path="packages/apps/GooManager" />
+  <project name="SomethingExplosive/proprietary_vendor_asus" path="vendor/asus" />
+  <project name="SomethingExplosive/proprietary_vendor_audience" path="vendor/audience" />
+  <project name="SomethingExplosive/proprietary_vendor_broadcom" path="vendor/broadcom" />
+  <project name="SomethingExplosive/proprietary_vendor_elan" path="vendor/elan" />
+  <project name="SomethingExplosive/proprietary_vendor_imgtec" path="vendor/imgtec" />
+  <project name="SomethingExplosive/proprietary_vendor_invensense" path="vendor/invensense" />
+  <project name="SomethingExplosive/proprietary_vendor_lge" path="vendor/lge" />
+  <project name="SomethingExplosive/proprietary_vendor_nvidia" path="vendor/nvidia" />
+  <project name="SomethingExplosive/proprietary_vendor_nxp" path="vendor/nxp" />
+  <project name="SomethingExplosive/proprietary_vendor_samsung" path="vendor/samsung" />
+  <project name="SomethingExplosive/proprietary_vendor_widevine" path="vendor/widevine" />
+  <project name="SomethingExplosive/android_vendor_SoMeX" path="vendor/SoMeX" />
+  <project name="SomethingExplosive/android_bionic" path="/bionic" />
+  <project name="SomethingExplosive/android_device_asus_deb" path="/device/asus/deb" />
+  <project name="SomethingExplosive/android_device_asus_flo" path="/device/asus/flo" />
+  <project name="SomethingExplosive/android_device_asus_flo-kernel" path="/device/asus/flo-kernel" />
+  <project name="SomethingExplosive/android_frameworks_opt_telephony" path="/frameworks/opt/telephony" />
+  <project name="SomethingExplosive/android_hardware_qcom_display" path="/hardware/qcom/display" />
+  <project name="SomethingExplosive/android_hardware_qcom_power" path="/hardware/qcom/power" />
+  <project name="SomethingExplosive/android_kernel_asus_flo" path="/kernel/asus/flo" />
+  <project name="SomethingExplosive/android_kernel_asus_grouper" path="/kernel/asus/grouper" />
+  <project name="SomethingExplosive/android_kernel_lge_mako" path="/kernel/lge/mako" />
+  <project name="SomethingExplosive/android_kernel_samsung_manta" path="/kernel/samsung/manta" />
+  <project name="SomethingExplosive/android_kernel_samsung_tuna" path="/kernel/samsung/tuna" />
+  <project name="SomethingExplosive/android_packages_apps_Browser" path="/packages/apps/Browser" />
+  <project name="SomethingExplosive/android_packages_apps_Dialer" path="/packages/apps/Dialer" />
+  <project name="SomethingExplosive/android_packages_apps_Email" path="/packages/apps/Email" />
+  <project name="SomethingExplosive/android_packages_apps_Music" path="/packages/apps/Music" />
+  <project name="SomethingExplosive/android_packages_apps_SoMeXPaper" path="/packages/apps/SoMeXPaper" />
+  <project name="SomethingExplosive/android_packages_apps_Torch" path="/packages/apps/Torch" />
+  <project name="SomethingExplosive/android_packages_inputmethods_LatinIME" path="/packages/inputmethods/LatinIME" />
+  <project name="SomethingExplosive/android_packages_providers_TelephonyProvider" path="/packages/providers/TelephonyProvider" />
+  <project name="SomethingExplosive/android_system_core" path="/system/core" />
+  <project name="SomethingExplosive/android_system_vold" path="/system/vold" />
 </manifest>

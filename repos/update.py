@@ -71,9 +71,11 @@ def update_github(user, outfile, manifest_url):
 	except:
 		githubauth = None
 
-#	lm = ElementTree.Element("manifest")
-	manifestreq = urllib2.Request(manifest_url, headers={"Accept": "application/xml"})
-	lm = ElementTree.parse(urllib2.urlopen(manifestreq)).getroot()
+	if manifest_url != None:
+		manifestreq = urllib2.Request(manifest_url, headers={"Accept": "application/xml"})
+		lm = ElementTree.parse(urllib2.urlopen(manifestreq)).getroot()
+	else:
+		lm = ElementTree.Element("manifest")
 
 	page = 1
 	while True:
@@ -92,7 +94,6 @@ def update_github(user, outfile, manifest_url):
 			if exists_path_in_tree(lm, repo_target):
 				continue
 
-#			print 'Adding element: ParanoidAndroid/%s -> %s' % (repo_name, repo_target)
 			project = ElementTree.Element("project", attrib = {"path": repo_target, "name": "%s/%s" % (user, repo_name)})
 			lm.append(project)
 		page = page + 1
@@ -122,17 +123,17 @@ def update_remote_manifests(repofile):
 
 		has_manifest, manifest = get_safe_attrib(child, 'manifest')
 		has_revision, revision = get_safe_attrib(child, 'revision')
-		has_review, review = get_safe_attrib(child, 'review')
 
-		if 'github.com' in remote_url and has_manifest and has_revision:
+		if 'github.com' in remote_url:
 			user = remote_url.replace("https://github.com/", "")
 			outfile = "%s.xml" % remote_name
-			manifest_raw = "https://raw.github.com/%s/%s/%s/default.xml" % (user, manifest, revision)
+
+			if has_manifest and has_revision:
+				manifest_raw = "https://raw.github.com/%s/%s/%s/default.xml" % (user, manifest, revision)
+			else:
+				manifest_raw = None
+
 			update_github(user, outfile, manifest_raw);
 
 update_remote_manifests("../repos.xml")
-
-#update_github("android", "aosp.xml", "https://raw.github.com/android/platform_manifest/android-4.2.2_r1/default.xml")
-#update_github("CyanogenMod", "cm.xml", "https://raw.github.com/CyanogenMod/android/cm-10.1/default.xml")
-#update_github("ParanoidAndroid", "paranoid.xml", "https://raw.github.com/ParanoidAndroid/manifest/jb43-legacy/default.xml")
 
