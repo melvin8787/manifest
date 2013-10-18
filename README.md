@@ -5,18 +5,34 @@ Getting Started
 ---------------
 
 To get started with MonkehMod, you'll need to get
-familiar with [Git and Repo](http://source.android.com/download/using-repo).
+familiar with [Git and Repo](http://source.android.com/source/developing.html).
 
-To initialize your local repository using the MonkehMod trees, use a command like this:
+To initialize your local repository using the monkeys trees, use a command like this:
 
 ```shell
-repo init -u git://github.com/MonkehMod/platform_manifest.git -b kitkat
+repo init -u git://github.com/MonkehMod/manifest.git -b kitkat
 ```
 
-To sync up:
+Then to sync up:
 
 ```shell
 repo sync
 ```
 
-For information how to build, check [Here](https://github.com/MonkehMod/build)
+Building
+--------
+<!-- build system information -->
+<!-- mokee? -->
+
+Submitting Patches
+------------------
+<!-- remote adding system (like cmgerrit command from cyanogen) -->
+```shell
+cd <project>
+
+repo start kitkat .
+<make all your changes>
+repo upload .
+```
+
+<!-- carbondev/liquidsmooth readme also nice -->
