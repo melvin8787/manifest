@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import re
 import urllib2
 import json
 import netrc, base64
@@ -26,6 +27,11 @@ def exists_path_in_tree(lm, path):
 			return True
 	return False
 
+def get_safe_attrib(elem, name):
+	if name in elem.keys():
+		return True, elem.attrib[name]
+	return False, None
+
 def indent(elem, level=0):
 	i = "\n" + level*"  "
 	if len(elem):
@@ -49,11 +55,11 @@ def clean_tree(lm):
 		for clean in to_clean:
 			if clean in child.keys():
 				del child.attrib[clean]
+		if child.attrib['path'].startswith('/'):
+			child.attrib['path'] = re.sub('^/', '', child.attrib['path'])
 
 def update_github(user, outfile, manifest_url):
-	repositories = []
-
-	print("Update %s" % outfile)
+	print("Updating %s" % outfile)
 
 	try:
 		authtuple = netrc.netrc().authenticators("api.github.com")
@@ -102,7 +108,31 @@ def update_github(user, outfile, manifest_url):
 	f.write(raw_xml)
 	f.close()
 
-update_github("android", "aosp.xml", "https://raw.github.com/android/platform_manifest/android-4.2.2_r1/default.xml")
-update_github("CyanogenMod", "cm.xml", "https://raw.github.com/CyanogenMod/android/cm-10.1/default.xml")
-update_github("ParanoidAndroid", "paranoid.xml", "https://raw.github.com/ParanoidAndroid/manifest/jb43-legacy/default.xml")
+def update_remote_manifests(repofile):
+	print("Updating manifest files using %s" % repofile)
+
+	remotetree = ElementTree.parse(repofile).getroot()
+
+	for child in remotetree.iter():
+		if child.tag != 'repo':
+			continue
+
+		remote_name = child.attrib['name']
+		remote_url = child.attrib['url']
+
+		has_manifest, manifest = get_safe_attrib(child, 'manifest')
+		has_revision, revision = get_safe_attrib(child, 'revision')
+		has_review, review = get_safe_attrib(child, 'review')
+
+		if 'github.com' in remote_url and has_manifest and has_revision:
+			user = remote_url.replace("https://github.com/", "")
+			outfile = "%s.xml" % remote_name
+			manifest_raw = "https://raw.github.com/%s/%s/%s/default.xml" % (user, manifest, revision)
+			update_github(user, outfile, manifest_raw);
+
+update_remote_manifests("../repos.xml")
+
+#update_github("android", "aosp.xml", "https://raw.github.com/android/platform_manifest/android-4.2.2_r1/default.xml")
+#update_github("CyanogenMod", "cm.xml", "https://raw.github.com/CyanogenMod/android/cm-10.1/default.xml")
+#update_github("ParanoidAndroid", "paranoid.xml", "https://raw.github.com/ParanoidAndroid/manifest/jb43-legacy/default.xml")
 
