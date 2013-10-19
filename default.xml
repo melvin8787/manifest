@@ -72,7 +72,7 @@
   <project path="development" name="platform/development" />
 
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
-  <project path="docs/develguide" name="docs_develguide" remote="monkeh" revision="jb-mr1" />
+  <project path="docs/devguide" name="MonkehMod/docs_devguide" remote="monkeh" revision="jb-mr1" />
 
   <project path="device/common" name="device/common" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
