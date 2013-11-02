@@ -46,6 +46,7 @@
   <default revision="kitkat-dev"
            remote="aosp"
            sync-c="true"
+           sync-f="true"
            sync-j="4" />
 
   <notice>
