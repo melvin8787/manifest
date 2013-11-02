@@ -49,14 +49,14 @@
            sync-j="4" />
 
   <notice>
-  MonkehMod 4.2.2 JellyBean mr1 has been successfully synced.
+  MonkehMod 4.4 KitKat has been successfully synced.
   </notice>
 
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="manifest" name="MonkehMod/manifest" remote="monkeh" revision="jb-mr1" />
+  <project path="manifest" name="MonkehMod/manifest" remote="monkeh" revision="kitkat" />
 
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
