@@ -141,6 +141,20 @@ def update_remote_manifests(repofile):
 			continue
 		update_remote(repofile, child)
 
+def chromium_manifest(repofile):
+	remotetree = ElementTree.parse(repofile).getroot()
 
-update_remote_manifests("../repos.xml")
+	for child in remotetree.iter():
+		if child.tag != 'repo':
+			continue
+
+		url = child.attrib['url']
+		has_manifest, manifest = get_safe_attrib(child, 'manifest')
+
+		if has_manifest:
+			url = "%s/%s" % (url, manifest)
+			os.system("chromium %s" % url)
+
+chromium_manifest("../repos.xml")
+#update_remote_manifests("../repos.xml")
 
