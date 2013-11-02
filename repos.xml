@@ -208,5 +208,11 @@
   <repo  name="omapzoom"
          url="git.omapzoom.org"
          review="review.omapzoom.org" />
+
+  <repo  name="omnirom"
+         url="https://github.com/omnirom"
+         manifest="android"
+         revision="android-4.3"
+         review="gerrit.omnirom.org" />
 </lookup>
 
