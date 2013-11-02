@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- vi: set noexpandtab sw=2: -->
 <manifest>
 
+  <!-- use revision refs/heads/kitkat-dev -->
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
-  <default revision="kitkat-dev"
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <!-- use revision refs/heads/cm-10.1 -->
+  <remote  name="cm"
+           fetch="https://github.com/"
+           review="review.cyanogenmod.com" />
+
+  <!-- use revision refs/heads/jb-mr1 -->
+  <remote  name="aokp"
+           fetch="https://github.com/"
+           review="gerrit.aokp.co" />
+
+  <!-- use revision refs/heads/jellybean -->
+  <remote  name="paranoid"
+           fetch="https://github.com/" />
+
+  <remote  name="paranoid-ssh"
+           fetch="ssh://git@bitbucket.org/paranoidandroid/" />
+
+  <!-- use revision refs/heads/jellybean -->
+  <remote  name="evervolv"
+           fetch="https://github.com/"
+           review="review.evervolv.com" />
+
+  <!-- use revision refs/heads/cm-10.1 -->
+  <remote  name="pac"
+           fetch="https://github.com/"
+           review="review.pac-man-rom.de" />
+
+  <!-- use revision refs/heads/jb-devel -->
+  <remote  name="cfx"
+           fetch="https://bitbucket.org/" />
+
+  <!-- use revision refs/heads/kitkat -->
+  <remote  name="monkeh"
+           fetch="https://github.com/" />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com/" />
+
+  <default revision="refs/heads/kitkat-dev"
            remote="aosp"
+           sync-c="true"
            sync-j="4" />
 
+  <!-- AOSP -->
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -24,11 +70,6 @@
   <project path="developers/docs" name="platform/developers/docs" />
   <project path="developers/samples/android" name="platform/developers/samples/android" />
   <project path="development" name="platform/development" />
-  <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
-  <project path="device/asus/flo" name="device/asus/flo" groups="device,flo" />
-  <project path="device/asus/flo-kernel" name="device/asus/flo-kernel" groups="device,flo" />
-  <project path="device/asus/grouper" name="device/asus/grouper" groups="device,grouper" />
-  <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
   <project path="device/common" name="device/common" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" />
@@ -40,12 +81,6 @@
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
-  <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead" />
-  <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead" />
-  <project path="device/lge/mako" name="device/lge/mako" groups="device,mako" />
-  <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" />
-  <project path="device/sample" name="device/sample" groups="pdk" />
-  <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" />
@@ -428,5 +463,5 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-
 </manifest>
+
