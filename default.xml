@@ -320,7 +320,6 @@
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
   <project path="cts" name="platform/cts" />
   <project path="ndk" name="platform/ndk" />
-  <project path="gdk" name="platform/gdk" />
   <project path="pdk" name="platform/pdk" groups="pdk" />
   <project path="sdk" name="platform/sdk" />
 
