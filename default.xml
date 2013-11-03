@@ -429,7 +429,7 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-  <project path="tools/repo" name="git-repo" remote="aosp-gerrit" revision="master" groups="notdefault,tools,manifest" />
+  <project path="tools/repo" name="MonkehMod/tools_repo" remote="monkeh" revision="master" groups="notdefault,tools,manifest" />
 
   <project path="vendor/monkeh" name="MonkehMod/vendor_monkeh" remote="monkeh" revision="jb-mr1" />
 
