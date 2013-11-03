@@ -8,6 +8,9 @@
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
 
+  <remote  name="aosp-gerrit"
+           fetch="https://gerrit.googlesource.com" />
+
   <remote  name="github"
            fetch="https://github.com/" />
 
@@ -414,6 +417,7 @@
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/su" name="CyanogenMod/android_system_su" remote="cm" revision="cm-10.1" />
   <project path="system/vold" name="platform/system/vold" groups="pdk" />
+
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
@@ -425,6 +429,7 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
+  <project path="tools/repo" name="git-repo" remote="aosp-gerrit" revision="master" groups="notdefault,tools" />
 
   <project path="vendor/monkeh" name="MonkehMod/vendor_monkeh" remote="monkeh" revision="jb-mr1" />
 </manifest>
