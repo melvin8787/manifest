@@ -5,19 +5,19 @@
   <repo  name="aosp"
          url="https://android.googlesource.com"
          manifest="platform/manifest"
-         revision="android-4.2.2_r1"
+         revision="kitkat-dev"
          review="https://android-review.googlesource.com/" />
 
   <repo  name="cm"
          url="https://github.com/CyanogenMod"
          manifest="android"
-         revision="cm-10.1"
+         revision="cm-11.0"
          review="review.cyanogenmod.com" />
 
   <repo  name="aokp"
          url="https://github.com/AOKP"
          manifest="platform_manifest"
-         revision="jb-mr1"
+         revision="kitkat"
          review="gerrit.aokp.co" />
 
   <repo  name="paranoid"
@@ -29,7 +29,7 @@
   <repo  name="evervolv"
          url="https://github.com/Evervolv"
          manifest="android"
-         revision="jellybean"
+         revision="kitkat"
          review="review.evervolv.com" />
 
   <repo  name="pac"
@@ -71,12 +71,12 @@
   <repo  name="somex"
          url="https://github.com/SomethingExplosive"
          manifest="android"
-         revision="somex-4.2" />
+         revision="somex-4.4" />
 
   <repo  name="pureaosp"
          url="https://github.com/Pure-Aosp"
          manifest="android"
-         revision="jb-mr1.1-release" />
+         revision="4.4" />
 
   <repo  name="mokee"
          url="https://github.com/MoKee"
@@ -92,7 +92,7 @@
   <repo  name="carbon"
          url="https://github.com/CarbonDev"
          manifest="android"
-         revision="jb2"
+         revision="kk"
          review="review.carbon-rom.com" />
 
   <repo  name="chameleon"
@@ -125,7 +125,7 @@
   <repo  name="liquidsmooth"
          url="https://github.com/LiquidSmooth"
          manifest="android"
-         revision="jb2" />
+         revision="kitkat" />
 
   <repo  name="cna"
          url="https://github.com/CNA"
@@ -135,7 +135,7 @@
   <repo  name="horizon"
          url="https://github.com/TeamHorizon"
          manifest="platform_manifest"
-         revision="jb-mr1"
+         revision="kitkat"
          review="review.gerrithub.io" />
 
   <repo  name="droidconcepts"
@@ -145,6 +145,7 @@
 
   <repo  name="rootbox"
          url="https://github.com/Root-Box"
+         manifest="platform_manifest"
          revision="jb-mr1" />
 
   <repo  name="sourcery"
@@ -181,13 +182,13 @@
   <repo  name="slimroms"
          url="https://github.com/SlimRoms"
          manifest="platform_manifest"
-         revision="jb4.2"
+         revision="kk4.4"
          review="https://review.slimroms.net:8443" />
 
   <repo  name="aocp"
          url="https://github.com/TheCollective"
          manifest="platform_manifest"
-         revision="jellybean2" />
+         revision="kitkat" />
 
   <repo  name="baked"
          url="https://github.com/TeamBAKED"
@@ -202,7 +203,7 @@
   <repo  name="vanir"
          url="https://github.com/VanirAOSP"
          manifest="platform_manifest"
-         revision="jb42"
+         revision="kk44"
          review="vaniraosp.goo.im" />
 
   <repo  name="omapzoom"
@@ -212,7 +213,11 @@
   <repo  name="omnirom"
          url="https://github.com/omnirom"
          manifest="android"
-         revision="android-4.3"
+         revision="android-4.4"
          review="gerrit.omnirom.org" />
+
+  <repo  name="sonyxperiadev"
+         url="https://github.com/sonyxperiadev"
+         revision="master" />
 </lookup>
 
