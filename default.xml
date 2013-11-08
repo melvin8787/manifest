@@ -56,7 +56,7 @@
   MonkehMod 4.4 KitKat has been successfully synced.
   </notice>
 
-  <project path="build" name="platform/build" groups="pdk" >
+  <project path="build" name="MonkehMod/build" remote="monkeh" revision="kitkat" groups="pdk">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
