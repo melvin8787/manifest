@@ -87,12 +87,12 @@
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="device/sample" name="device/sample" groups="pdk" />
 
-  <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk,arm" />
-  <project path="device/generic/mips" name="device/generic/mips" groups="pdk,mips" />
-  <project path="device/generic/x86" name="device/generic/x86" groups="pdk,x86" />
-  <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="pdk,arm" />
-  <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="pdk,mips" />
-  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="pdk,x86" />
+  <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="notdefault,pdk,arm" />
+  <project path="device/generic/mips" name="device/generic/mips" groups="notdefault,pdk,mips" />
+  <project path="device/generic/x86" name="device/generic/x86" groups="notdefault,pdk,x86" />
+  <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="notdefault,pdk,arm" />
+  <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="notdefault,pdk,mips" />
+  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="notdefault,pdk,x86" />
 
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" />
