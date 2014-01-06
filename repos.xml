@@ -26,6 +26,18 @@
          revision="jellybean"
          review="gerrit.paranoidandroid.co" />
 
+  <repo  name="aospa"
+         url="https://github.com/AOSPA"
+         manifest="manifest"
+         revision="kitkat"
+         review="gerrit.paranoidandroid.co" />
+
+  <repo  name="aospa-legacy"
+         url="https://github.com/AOSPA-legacy"
+         manifest="manifest"
+         revision="kitkat"
+         review="gerrit.paranoidandroid.co" />
+
   <repo  name="evervolv"
          url="https://github.com/Evervolv"
          manifest="android"
@@ -219,5 +231,16 @@
   <repo  name="sonyxperiadev"
          url="https://github.com/sonyxperiadev"
          revision="master" />
+
+  <repo  name="android-x86"
+         url="git.android-x86.org"
+         manifest="manifest"
+         revision="kitkat-x86" />
+
+  <repo  name="android-ia"
+         url="android-review.01.org"
+         manifest="platform/manifest"
+         revision="master"
+         review="android-review.01.org" />
 </lookup>
 
